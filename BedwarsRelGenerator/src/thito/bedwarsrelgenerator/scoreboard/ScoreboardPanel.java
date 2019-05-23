@@ -196,7 +196,7 @@ public class ScoreboardPanel {
 		if (!enabled) return;
 		for (ArenaHandler h : BWG.HANDLERS) {
 			final Game g = h.getGame();
-//			sb.clearSlot(DisplaySlot.SIDEBAR);
+			sb.clearSlot(DisplaySlot.SIDEBAR);
 			Map<String,String> placeholders = new HashMap<>();
 			placeholders.put("game", g.getName());
 			placeholders.put("date", getDate());
