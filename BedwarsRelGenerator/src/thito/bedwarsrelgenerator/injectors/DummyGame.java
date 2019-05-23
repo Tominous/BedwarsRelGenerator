@@ -115,28 +115,28 @@ game-scoreboard:
 		}
 	}
 	public void updateSB() {
-//		if (getState()== GameState.WAITING
-//				&& BedwarsRel.getInstance().getBooleanConfig("lobby-scoreboard.enabled", true)) {
-//			updateLobbySB();
-//			return;
-//		}
-//		Scoreboard scoreboard = getScoreboard();
-//		Objective obj = scoreboard.getObjective("display");
-//		if (obj == null) {
-//			obj = scoreboard.registerNewObjective("display", "dummy");
-//		}
-//		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
-//		obj.setDisplayName(formatScoreboardTitle());
-//		for (Team t : getTeams().values()) {
-//			scoreboard.resetScores(this.formatScoreboardTeam(t, false));
-//			scoreboard.resetScores(this.formatScoreboardTeam(t, true));
-//			boolean teamDead = t.isDead(this) && this.getState() == GameState.RUNNING;
-//			Score score = obj.getScore(this.formatScoreboardTeam(t, teamDead));
-//			score.setScore(t.getPlayers().size());
-//		}
-//		for (Player player : getPlayers()) {
-//			player.setScoreboard(scoreboard);
-//		}
+		if (getState()== GameState.WAITING
+				&& BedwarsRel.getInstance().getBooleanConfig("lobby-scoreboard.enabled", true)) {
+			updateLobbySB();
+			return;
+		}
+		Scoreboard scoreboard = getScoreboard();
+		Objective obj = scoreboard.getObjective("display");
+		if (obj == null) {
+			obj = scoreboard.registerNewObjective("display", "dummy");
+		}
+		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+		obj.setDisplayName(formatScoreboardTitle());
+		for (Team t : getTeams().values()) {
+			scoreboard.resetScores(this.formatScoreboardTeam(t, false));
+			scoreboard.resetScores(this.formatScoreboardTeam(t, true));
+			boolean teamDead = t.isDead(this) && this.getState() == GameState.RUNNING;
+			Score score = obj.getScore(this.formatScoreboardTeam(t, teamDead));
+			score.setScore(t.getPlayers().size());
+		}
+		for (Player player : getPlayers()) {
+			player.setScoreboard(scoreboard);
+		}
 	}
 	public String getString(String s,String def) {
 		return null;
