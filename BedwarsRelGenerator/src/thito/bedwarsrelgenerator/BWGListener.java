@@ -73,7 +73,7 @@ public class BWGListener implements Listener {
 	
 	@EventHandler
 	public void clck(InventoryClickEvent e) {
-//		org.bukkit.plugin.java.PluginClassLoader
+		org.bukkit.plugin.java.PluginClassLoader
 		if (!(e.getWhoClicked() instanceof Player)) return;
 		final ItemStack i = e.getCurrentItem();
 		Player p = (Player)e.getWhoClicked();
