@@ -77,7 +77,7 @@ public class RejoinData {
 		}.runTaskLater((Plugin) BedwarsRel.getInstance(), 15);
 		BedwarsPlayerJoinedEvent joinEvent = new BedwarsPlayerJoinedEvent(g, t, p);
 		BedwarsRel.getInstance().getServer().getPluginManager().callEvent(joinEvent);
-//		g.updateScoreboard();
+		g.updateScoreboard();
 		g.updateSigns();
 		
 	}
